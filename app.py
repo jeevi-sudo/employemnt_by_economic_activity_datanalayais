@@ -1,7 +1,8 @@
 import streamlit as st
+from utils import  load_data, sidebar_filters, ...
 
 st.set_page_config(page_title="ILO ICT Dashboard", page_icon="📡", layout="wide")
-apply_css()
+
 
 df = load_data()
 year_range, selected_countries, selected_indicators, benchmark_country, top_n = sidebar_filters(df)
