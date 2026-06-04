@@ -7,48 +7,7 @@ GRID_CLR = "#2d3154"
 TEXT_CLR = "#c5c9e8"
 PALETTE  = ["#6c71d6", "#48b0f1", "#f9a03f", "#5ec97e", "#f06292", "#ab7df8"]
 
-CSS = """
-<style>
-    .stApp { background-color: #0f1117; }
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1a1d2e 0%, #0f1117 100%);
-        border-right: 1px solid #2d3154;
-    }
-    [data-testid="metric-container"] {
-        background: linear-gradient(135deg, #1e2140 0%, #252847 100%);
-        border: 1px solid #3d4270; border-radius: 12px;
-        padding: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-    [data-testid="metric-container"] label { color: #8b92c4 !important; font-size: 0.8rem !important; }
-    [data-testid="metric-container"] [data-testid="stMetricValue"] { color: #e8eaf6 !important; font-size: 1.8rem !important; }
-    .section-header {
-        font-size: 1.1rem; font-weight: 700; color: #7c83d6;
-        letter-spacing: 0.08em; text-transform: uppercase;
-        margin-bottom: 4px; padding-bottom: 6px; border-bottom: 2px solid #2d3154;
-    }
-    .insight-card {
-        background: linear-gradient(135deg, #1e2140 0%, #252847 100%);
-        border: 1px solid #3d4270; border-radius: 12px;
-        padding: 18px 20px; margin-bottom: 12px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-    }
-    .insight-card h4 { color: #7c83d6; margin: 0 0 8px 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
-    .insight-card p  { color: #c5c9e8; margin: 0; font-size: 0.95rem; line-height: 1.5; }
-    .badge {
-        display: inline-block; background: rgba(100,110,220,0.2);
-        border: 1px solid #4a52a0; border-radius: 20px;
-        padding: 4px 14px; font-size: 0.78rem; color: #a0a8e8; margin-right: 8px;
-    }
-    h1,h2,h3 { color: #e8eaf6 !important; }
-    p, li { color: #c5c9e8; }
-    div[data-testid="stPlotlyChart"] {
-        border-radius: 12px; overflow: hidden; border: 1px solid #2d3154;
-    }
-</style>
-"""
 
-def apply_css():
-    st.markdown(CSS, unsafe_allow_html=True)
 
 def plotly_layout(fig, title="", height=420):
     fig.update_layout(
