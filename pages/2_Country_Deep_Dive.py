@@ -1,9 +1,9 @@
 import streamlit as st
 import plotly.express as px
-from utils import apply_css, load_data, sidebar_filters, plotly_layout, PALETTE, PLOT_BG, PAPER_BG, GRID_CLR, TEXT_CLR
+from utils import load_data, sidebar_filters, plotly_layout, PALETTE, PLOT_BG, PAPER_BG, GRID_CLR, TEXT_CLR
 
 st.set_page_config(page_title="Country Deep Dive", page_icon="🌍", layout="wide")
-apply_css()
+
 
 df = load_data()
 year_range, selected_countries, selected_indicators, benchmark_country, top_n = sidebar_filters(df)
