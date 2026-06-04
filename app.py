@@ -1,5 +1,4 @@
 import streamlit as st
-from utils import apply_css, load_data, sidebar_filters
 
 st.set_page_config(page_title="ILO ICT Dashboard", page_icon="📡", layout="wide")
 apply_css()
